@@ -1,326 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-  >
-
-  <meta
-    name="theme-color"
-    content="#071a3d"
-  >
-
-  <meta
-    name="description"
-    content="Rishi Music - offline personal music player"
-  >
-
-  <meta name="mobile-web-app-capable" content="yes">
-
-  <meta name="apple-mobile-web-app-capable" content="yes">
-
-  <meta
-    name="apple-mobile-web-app-status-bar-style"
-    content="black-translucent"
-  >
-
-  <meta
-    name="apple-mobile-web-app-title"
-    content="Rishi Music"
-  >
-
-  <title>Rishi Music</title>
-
-  <link
-    rel="manifest"
-    href="./manifest.json"
-  >
-
-  <link
-    rel="stylesheet"
-    href="./style.css"
-  >
-
+  <title>Generate Rishi Music Icons</title>
 </head>
-
-
-<body>
-
-  <div class="app-shell">
-
-
-    <!-- SIDEBAR -->
-
-    <aside class="sidebar">
-
-      <div class="brand">
-
-        <div class="brand-icon">
-          ♫
-        </div>
-
-        <div>
-
-          <h1>RISHI MUSIC</h1>
-
-          <p>
-            Offline Music Station
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <!-- IMPORT -->
-
-      <label class="import-button">
-
-        <span>
-          ＋ Import Songs
-        </span>
-
-        <input
-          id="audioFileInput"
-          type="file"
-          accept="audio/*,.mp3,.m4a,.aac,.wav,.flac,.ogg,.opus,.webm"
-          multiple
-        >
-
-      </label>
-
-
-      <!-- ALL SONGS -->
-
-      <button
-        id="allModeBtn"
-        class="side-button active"
-      >
-        ♫ All Songs
-      </button>
-
-
-      <!-- DIRECTOR -->
-
-      <div class="filter-title">
-        MUSIC DIRECTOR
-      </div>
-
-      <select
-        id="directorFilter"
-        class="director-select"
-      >
-
-        <option value="All">
-          All Directors
-        </option>
-
-      </select>
-
-
-      <!-- STORAGE INFO -->
-
-      <div class="library-info">
-
-        <span id="songCount">
-          0 songs
-        </span>
-
-        <span id="storageStatus">
-          Offline storage
-        </span>
-
-      </div>
-
-    </aside>
-
-
-    <!-- MAIN -->
-
-    <main class="main">
-
-      <header class="topbar">
-
-        <div>
-
-          <p class="eyebrow">
-            YOUR LIBRARY
-          </p>
-
-          <h2 id="viewTitle">
-            All Songs
-          </h2>
-
-        </div>
-
-
-        <!-- SEARCH -->
-
-        <input
-          id="searchInput"
-          class="search"
-          type="search"
-          placeholder="🔍 Search songs..."
-        >
-
-      </header>
-
-
-      <!-- TODAY INFO -->
-
-      <div
-        id="todayInfo"
-        class="today-info"
-      >
-        Today's unplayed songs are prioritized in All mode.
-      </div>
-
-
-      <!-- SONG LIST -->
-
-      <section
-        id="songListContainer"
-        class="song-list"
-      ></section>
-
-    </main>
-
-
-    <!-- PLAYER -->
-
-    <section class="player">
-
-      <div class="now-playing">
-
-        <div class="mini-disc">
-          ♫
-        </div>
-
-        <div class="now-text">
-
-          <strong id="playerTitle">
-            No track playing
-          </strong>
-
-          <span id="playerArtist">
-            Choose a song from your library
-          </span>
-
-        </div>
-
-      </div>
-
-
-      <!-- CONTROLS -->
-
-      <div class="player-controls">
-
-        <button
-          id="prevBtn"
-          class="control"
-          aria-label="Previous"
-        >
-          ⏮
-        </button>
-
-        <button
-          id="playBtn"
-          class="control play"
-          aria-label="Play"
-        >
-          ▶
-        </button>
-
-        <button
-          id="nextBtn"
-          class="control"
-          aria-label="Next"
-        >
-          ⏭
-        </button>
-
-      </div>
-
-
-      <!-- PROGRESS -->
-
-      <div class="timeline">
-
-        <span id="currentTime">
-          0:00
-        </span>
-
-        <input
-          id="progressBar"
-          type="range"
-          min="0"
-          max="100"
-          value="0"
-          step="0.1"
-        >
-
-        <span id="totalTime">
-          0:00
-        </span>
-
-      </div>
-
-    </section>
-
-  </div>
-
-
-  <!-- AUDIO ENGINE -->
-
-  <audio
-    id="audioEngine"
-    preload="auto"
-    playsinline
-  ></audio>
-
-
-  <script src="./app.js"></script>
-
-
-  <!-- SERVICE WORKER REGISTRATION -->
-
+<body style="background:#0c0f14; color:#fff; font-family:sans-serif; text-align:center; padding:40px;">
+  <h2>Generating Valid PNG Icons...</h2>
+  <p>Downloading <code>icon-192.png</code> and <code>icon-512.png</code>...</p>
   <script>
+    function createIcon(dimension, filename) {
+      const canvas = document.createElement("canvas");
+      canvas.width = dimension;
+      canvas.height = dimension;
+      const ctx = canvas.getContext("2d");
 
-    if ("serviceWorker" in navigator) {
+      // Deep dark blue background
+      const gradient = ctx.createLinearGradient(0, 0, dimension, dimension);
+      gradient.addColorStop(0, "#08101e");
+      gradient.addColorStop(1, "#02060d");
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, dimension, dimension);
 
-      window.addEventListener("load", function () {
+      // Glowing circular border
+      ctx.beginPath();
+      ctx.arc(dimension / 2, dimension / 2, dimension * 0.38, 0, Math.PI * 2);
+      ctx.lineWidth = dimension * 0.05;
+      ctx.strokeStyle = "#00d2ff";
+      ctx.shadowColor = "#1da1f2";
+      ctx.shadowBlur = dimension * 0.08;
+      ctx.stroke();
 
-        navigator.serviceWorker.register("./sw.js", {
-          scope: "./"
-        })
-        .then(function (registration) {
+      // Music note glyph
+      ctx.fillStyle = "#ffffff";
+      ctx.font = `bold ${Math.floor(dimension * 0.36)}px sans-serif`;
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText("♫", dimension / 2, dimension / 2);
 
-          console.log(
-            "Rishi Music Service Worker registered:",
-            registration.scope
-          );
-
-        })
-        .catch(function (error) {
-
-          console.error(
-            "Rishi Music Service Worker registration failed:",
-            error
-          );
-
-        });
-
-      });
-
+      // Export binary PNG
+      canvas.toBlob(function (blob) {
+        const link = document.createElement("a");
+        link.download = filename;
+        link.href = URL.createObjectURL(blob);
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(link.href);
+      }, "image/png");
     }
 
+    window.onload = function () {
+      createIcon(192, "icon-192.png");
+      setTimeout(() => createIcon(512, "icon-512.png"), 600);
+    };
   </script>
-
 </body>
-
 </html>
