@@ -1,32 +1,46 @@
 {
-  "name": "Rishi Music",
-  "short_name": "RishiMusic",
-  "start_url": "https://srishi1009-cyber.github.io/RISHIBOY/",
-  "scope": "https://srishi1009-cyber.github.io/RISHIBOY/",
-  "id": "https://srishi1009-cyber.github.io/RISHIBOY/",
-  "display": "standalone",
-  "orientation": "portrait",
-  "background_color": "#0c0f14",
-  "theme_color": "#1da1f2",
-  "description": "Personal offline music player",
-  "icons": [
-    {
-      "src": "https://srishi1009-cyber.github.io/RISHIBOY/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "https://srishi1009-cyber.github.io/RISHIBOY/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "https://srishi1009-cyber.github.io/RISHIBOY/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
-    }
-  ]
+"id": "/RISHIBOY/",
+"name": "Rishi Music",
+"short_name": "RishiMusic",
+"description": "Rishi Music - Your personal offline music player",
+"start_url": "/RISHIBOY/",
+"scope": "/RISHIBOY/",
+"display": "standalone",
+"display_override": [
+"standalone"
+],
+"orientation": "portrait",
+"background_color": "#0C0F14",
+"theme_color": "#087BFF",
+"lang": "en",
+"categories": [
+"music",
+"entertainment"
+],
+"icons": [
+{
+"src": "/RISHIBOY/icon-192.png",
+"sizes": "192x192",
+"type": "image/png",
+"purpose": "any"
+},
+{
+"src": "/RISHIBOY/icon-512.png",
+"sizes": "512x512",
+"type": "image/png",
+"purpose": "any"
+},
+{
+"src": "/RISHIBOY/icon-192.png",
+"sizes": "192x192",
+"type": "image/png",
+"purpose": "maskable"
+},
+{
+"src": "/RISHIBOY/icon-512.png",
+"sizes": "512x512",
+"type": "image/png",
+"purpose": "maskable"
+}
+]
 }
