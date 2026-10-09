@@ -5,6 +5,7 @@
   "scope": "https://srishi1009-cyber.github.io/RISHIBOY/",
   "id": "https://srishi1009-cyber.github.io/RISHIBOY/",
   "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#0c0f14",
   "theme_color": "#1da1f2",
   "description": "Personal offline music player",
